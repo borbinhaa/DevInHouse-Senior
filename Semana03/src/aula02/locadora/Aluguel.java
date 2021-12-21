@@ -1,7 +1,7 @@
-package locadora;
+package aula02.locadora;
 
-import clientes.Cliente;
-import servicos.Seguro;
+import aula02.clientes.Cliente;
+import aula02.servicos.Seguro;
 
 public class Aluguel {
 	

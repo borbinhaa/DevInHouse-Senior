@@ -1,6 +1,6 @@
-package locadora;
+package aula02.locadora;
 
-import servicos.CategoriaHabilitacao;
+import aula02.servicos.CategoriaHabilitacao;
 
 public class Carro {
 	

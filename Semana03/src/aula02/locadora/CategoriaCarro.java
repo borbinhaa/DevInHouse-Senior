@@ -1,4 +1,4 @@
-package locadora;
+package aula02.locadora;
 
 public enum CategoriaCarro {
 

@@ -1,7 +1,7 @@
-package locadora;
+package aula02.locadora;
 
-import clientes.Cliente;
-import clientes.TipoPessoa;
+import aula02.clientes.Cliente;
+import aula02.clientes.TipoPessoa;
 
 public class Teste {
 
