@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 import exercicios.filmes.Filme;
 import exercicios.recomendacoes.Plataforma;
@@ -14,24 +14,23 @@ public class Usuario {
 	private String nomeCompleto;
 	private String endereco;
 	private String dataAniversario;
-	private LocalDate dataAniversarioFatorada;
 	private ArrayList<Filme> filmesCurtidos = new ArrayList<>();
 	private ArrayList<Filme> filmesNaoCurtidos = new ArrayList<>();
 	private ArrayList<String> filmesRecomendados = new ArrayList<>();
 	private int idade;
 	private LocalDate ultimaRecomendacao = LocalDate.of(1900, 1, 1), ultimoPagamento;
-	private Scanner scanner = new Scanner(System.in);
+	
 
 	public Usuario(String nomeCompleto, String endereco, String dataAniversario) {
 		this.nomeCompleto = nomeCompleto;
 		this.endereco = endereco;
 		this.dataAniversario = dataAniversario;
-		this.dataAniversarioFatorada = FatorarAniversario();
 		this.idade = CalcularIdade();
 		this.ultimoPagamento = LocalDate.now();
 	}
 
 	public void assistirFilme(Filme filme) {
+//		Scanner scanner = new Scanner(System.in);
 		if (!this.verificacaoPagamento()) {
 			System.out.println("Você precisa pagar sua assinatura.");
 		} else {
@@ -82,7 +81,7 @@ public class Usuario {
 	}
 
 	private int CalcularIdade() {
-		return (int) ChronoUnit.YEARS.between(this.dataAniversarioFatorada, LocalDate.now());
+		return (int) ChronoUnit.YEARS.between(this.FatorarAniversario(), LocalDate.now());
 	}
 
 	public void pagar() {
@@ -142,7 +141,7 @@ public class Usuario {
 	@Override
 	public String toString() {
 		return "Usuario [nomeCompleto=" + nomeCompleto + ", endereco=" + endereco + ", dataAniversario="
-				+ dataAniversario + ", dataAniversarioFatorada=" + dataAniversarioFatorada + "]";
+				+ dataAniversario + "]";
 	}
 
 }
