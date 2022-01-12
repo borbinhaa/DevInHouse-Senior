@@ -19,7 +19,6 @@ public class Usuario {
 	private ArrayList<String> filmesRecomendados = new ArrayList<>();
 	private int idade;
 	private LocalDate ultimaRecomendacao = LocalDate.of(1900, 1, 1), ultimoPagamento;
-	
 
 	public Usuario(String nomeCompleto, String endereco, String dataAniversario) {
 		this.nomeCompleto = nomeCompleto;
@@ -136,7 +135,6 @@ public class Usuario {
 	public LocalDate getUltimaRecomendacao() {
 		return ultimaRecomendacao;
 	}
-
 
 	@Override
 	public String toString() {
