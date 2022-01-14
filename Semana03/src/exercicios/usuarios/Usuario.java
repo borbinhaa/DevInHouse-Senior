@@ -8,51 +8,45 @@ import java.util.ArrayList;
 
 import exercicios.filmes.Filme;
 import exercicios.recomendacoes.Plataforma;
+import lombok.Getter;
+import lombok.Setter;
 
 public class Usuario {
 
+	@Getter
+	@Setter
 	private String nomeCompleto;
+	@Getter
+	@Setter
 	private String endereco;
+	@Getter
 	private String dataAniversario;
+	@Getter
 	private ArrayList<Filme> filmesCurtidos = new ArrayList<>();
+	@Getter
 	private ArrayList<Filme> filmesNaoCurtidos = new ArrayList<>();
+	@Getter
 	private ArrayList<String> filmesRecomendados = new ArrayList<>();
-	private int idade;
-	private LocalDate ultimaRecomendacao = LocalDate.of(1900, 1, 1), ultimoPagamento;
+	@Getter
+	private long idade;
+	@Getter
+	private LocalDate ultimaRecomendacao = LocalDate.of(1900, 1, 1);
+	@Getter
+	@Setter
+	private Conta conta;
 
 	public Usuario(String nomeCompleto, String endereco, String dataAniversario) {
 		this.nomeCompleto = nomeCompleto;
 		this.endereco = endereco;
 		this.dataAniversario = dataAniversario;
-		this.idade = CalcularIdade();
-		this.ultimoPagamento = LocalDate.now();
+		this.idade = calcularIdade();
 	}
 
-	public void assistirFilme(Filme filme) {
-//		Scanner scanner = new Scanner(System.in);
-		if (!this.verificacaoPagamento()) {
-			System.out.println("Você precisa pagar sua assinatura.");
-		} else {
-			System.out.println("Obrigado por assistir o filme " + filme.getNome() + ".");
-//			System.out.println("Você gostou do filme?\n(1)Curtir\n(2)Descurtir o filme\n(3)Nao curtir nem discurtir\n");
-//			int gostouOuNao = scanner.nextInt();
-//			
-//			if (gostouOuNao == 1) {
-//				this.CurtirFilme(filme);
-//			} else if (gostouOuNao == 2) {
-//				this.DescurtirFilme(filme);
-//			}
-
-			filme.addVezAssistidas();
-			filme.getGenero().addVezAssistidas();
-		}
-	}
-
-	public void SugerirFilme(Plataforma app, String filme) {
+	public void sugerirFilme(Plataforma app, String filme) {
 		long diffEntreSugestoes = ChronoUnit.MONTHS.between(ultimaRecomendacao, LocalDate.now());
 
 		if (diffEntreSugestoes >= 1) {
-			app.getFilmesRecomendados().add(filme);
+			app.getFilmesSugeridos().add(filme);
 			System.out.println("Filme " + filme + " sugerido com sucesso por " + this.getNomeCompleto() + ".");
 			this.ultimaRecomendacao = LocalDate.now();
 		} else {
@@ -62,84 +56,25 @@ public class Usuario {
 		}
 	}
 
-	public void RecomendarFilme(Usuario user, Filme filme, String porqueRecomendou) {
+	public void recomendarFilme(Usuario user, Filme filme, String porqueRecomendou) {
 		user.getFilmesRecomendados().add("User: " + this.getNomeCompleto() + " | Recomendou o filme: " + filme.getNome()
 				+ " | Motivo: " + porqueRecomendou);
 		System.out.println(
 				this.getNomeCompleto() + " recomendou " + filme.getNome() + " para " + user.getNomeCompleto() + ".");
 	}
 
-	public void CurtirFilme(Filme filme) {
-		this.filmesCurtidos.add(filme);
-		System.out.println(this.getNomeCompleto() + " curtiu o filme: " + filme.getNome() + ".");
+	private int calcularIdade() {
+		return (int) ChronoUnit.YEARS.between(this.fatorarAniversario(), LocalDate.now());
 	}
 
-	public void DescurtirFilme(Filme filme) {
-		this.filmesNaoCurtidos.add(filme);
-		System.out.println(this.getNomeCompleto() + " não curtiu o filme: " + filme.getNome() + ".");
-	}
-
-	private int CalcularIdade() {
-		return (int) ChronoUnit.YEARS.between(this.FatorarAniversario(), LocalDate.now());
-	}
-
-	public void pagar() {
-		this.ultimoPagamento = LocalDate.now();
-	}
-
-	private boolean verificacaoPagamento() {
-		if (ChronoUnit.MONTHS.between(ultimoPagamento, LocalDate.now()) >= 1) {
-			return false;
-		}
-
-		return true;
-	}
-
-	private LocalDate FatorarAniversario() {
+	private LocalDate fatorarAniversario() {
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		return LocalDate.parse(this.dataAniversario, formatter);
 	}
 
-	public String getNomeCompleto() {
-		return nomeCompleto;
-	}
-
-	public void setNomeCompleto(String nomeCompleto) {
-		this.nomeCompleto = nomeCompleto;
-	}
-
-	public String getEndereco() {
-		return endereco;
-	}
-
-	public void setEndereco(String endereco) {
-		this.endereco = endereco;
-	}
-
-	public String getDataAniversario() {
-		return dataAniversario;
-	}
-
-	public ArrayList<Filme> getFilmesCurtidos() {
-		return filmesCurtidos;
-	}
-
-	public int getIdade() {
-		return idade;
-	}
-
-	public ArrayList<String> getFilmesRecomendados() {
-		return filmesRecomendados;
-	}
-
-	public LocalDate getUltimaRecomendacao() {
-		return ultimaRecomendacao;
-	}
-
 	@Override
 	public String toString() {
-		return "Usuario [nomeCompleto=" + nomeCompleto + ", endereco=" + endereco + ", dataAniversario="
-				+ dataAniversario + "]";
+		return nomeCompleto;
 	}
 
 }
