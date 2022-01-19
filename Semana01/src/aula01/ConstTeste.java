@@ -1,4 +1,5 @@
 // https://blog.algaworks.com/atalhos-e-configuracoes-para-ganhar-produtividade-com-eclipse/
+// Alt + shift + r = renomear variavel 
 
 package aula01;
 
