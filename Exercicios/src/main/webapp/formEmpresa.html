@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adiciona Empresas</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            background-color: #000;
+            color: #fff;
+            display: block;
+            margin: 0;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 50px;
+        }
+
+        #footer {
+            display: block;
+            padding: 20px;
+            background-color: black;
+        }
+
+        form {
+            padding: 70px 40px;
+        }
+
+        #footer p {
+            color: white;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        .submit {
+        	display: block;
+        	margin-top: 20px;
+        	border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="header">Adiciona Empresa</h1>
+
+    <form action="/Exercicios/addempresa" method="post">
+        <label for="empresa" autofocus>Empresa:</label>
+        <input type="text" name="empresa" id="empresa">
+        
+        <label for="cnpj" autofocus>CNPJ:</label>
+        <input type="text" name="cnpj" id="cnpj">
+        
+        <input type="submit" class="submit">
+    </form>
+
+
+    <footer id="footer">
+        <p>&copy; from my mind</p>
+    </footer>
+</body>
+
+</html>
