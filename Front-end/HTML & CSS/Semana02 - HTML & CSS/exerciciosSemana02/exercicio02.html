@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .table {
+            width: 30vw;
+            border-collapse: collapse;
+        }
+
+        .table-header tr th {
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .first-line td {
+            font-weight: bold;
+        }
+
+        .bg-aqua {
+            background-color: aqua;
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(80, 80, 80, .8);
+        }
+
+        th {
+            font-weight: normal;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="table">
+        <thead class="table-header">
+            <tr>
+                <th class="bg-aqua" colspan="4">Minha tabela</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="first-line">
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+                <td>D</td>
+            </tr>
+            <tr>
+                <td>A1</td>
+                <td>B2</td>
+                <td>C3</td>
+                <td>D4</td>
+            </tr>
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+                <td>D2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="bg-aqua" colspan="4">Meu rodapé</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

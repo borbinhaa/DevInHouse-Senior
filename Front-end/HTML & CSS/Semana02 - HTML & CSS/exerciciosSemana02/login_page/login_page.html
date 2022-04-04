@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nova Conta</title>
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/e3136c5ff7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <img class="login-img" src="./imgs/Magnifying-Glass-Search-PNG-Image-HD.png" alt="">
+        <main class="main-container">
+            <h1 class="title">Crie sua conta</h1>
+            <h2 class="subtitle">Tenha acesso a milhares de imagens gratuitas!</h2>
+
+            <form class="login-form" action="post">
+                <div class="organize simple-border">
+                    <label for="user">
+                        <i class="fa-regular fa-user"></i>
+                    </label>
+                    <input type="text" name="user" id="user" placeholder="Usuário" required>
+                </div>
+                <div class="organize simple-border">
+                    <label for="email">
+                        <i class="fa-regular fa-envelope"></i>
+                    </label>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </div>
+                <div class="organize simple-border">
+                    <label for="password">
+                        <i class="fa-solid fa-lock"></i>
+                    </label>
+                    <input type="password" name="password" id="password" placeholder="Senha" required>
+                </div>
+                <input class="simple-border" type="submit" value="Cadastrar">
+            </form>
+            <p class="ask-if-signed">Já possui uma conta? <a href="#">Clique Aqui</a></p>
+        </main>
+    </div>
+</body>
+
+</html>
