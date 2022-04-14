@@ -23,7 +23,7 @@
                         <a aria-current="page" class="nav-link active" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="/produtos/novo">Adiconar Produto</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#"
@@ -46,6 +46,10 @@
                 <form class="d-flex">
                     <input aria-label="Search" class="form-control me-2" placeholder="Search" type="search">
                     <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+
+                <form class="d-flex ms-2" method="post" th:action="@{/logout}">
+                    <button class="btn btn-outline-success" type="submit">Logout</button>
                 </form>
             </div>
         </div>
