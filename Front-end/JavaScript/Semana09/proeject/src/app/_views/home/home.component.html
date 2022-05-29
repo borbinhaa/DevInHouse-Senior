@@ -1,0 +1,44 @@
+<div id="header">
+  <app-header></app-header>
+</div>
+
+<!-- <hr>
+<p>home works!</p>
+<p>{{ email }}</p>
+
+<button type="button" class="btn btn-primary" (click)="mudarCor()">Mostrar alerta</button>
+<button [class.active]="formValid" class="btn btn-dark">Class Active</button>
+<button [ngClass]="formValid ? 'active' : '' " class="btn btn-dark">Class Active</button>
+
+<hr>
+
+<input type="text" [(ngModel)]="nomePessoa">
+<button (click)="mostrarNome()"> Enviar</button>
+
+<hr>
+
+<app-card-noticia [titulo]="titulo"></app-card-noticia>
+<app-card-noticia [titulo]=" 'titulo 2' "></app-card-noticia> -->
+
+<div class="row">
+  <div class="col">
+    <app-exercise-card [name]="leia.name" [description]="leia.description" [type]="leia.type" [gender]="leia.gender"
+      [imgPath]="leia.imgPath" [height]="leia.height"></app-exercise-card>
+  </div>
+  <div class="col">
+    <div class="card" style="width: 100%;">
+      <img src="{{ luke.imgPath }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ luke.name }} </h5>
+        <p class="card-text">{{ luke.description }}</p>
+        <footer class="blockquote-footer">Leia Organa Solo</footer>
+        <p class="card-text"><small class="text-muted">{{ luke.type }}, {{ luke.gender }}, {{ luke.height }}</small></p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="footer">
+  <app-footer></app-footer>
+</div>

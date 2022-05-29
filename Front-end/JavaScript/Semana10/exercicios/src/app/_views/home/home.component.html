@@ -1,0 +1,7 @@
+<div class="card">
+  <app-card [cardObject]="cardObject" (cliqueEmLink)="trocaCor()"></app-card>
+</div>
+
+<div class="button">
+  <app-button [text]="'Submit'" [alertaMsg]="'teste'" (alerta)="gerarAlerta($event)"></app-button>
+</div>

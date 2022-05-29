@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head th:replace="~{base :: head('Home')}">
+</head>
+<body>
+<heaeder th:replace="~{base :: header}"></heaeder>
+<div class="container">
+    <h1 class="h1 mb-4">Produtos</h1>
+    <div class="row">
+        <div class="card me-4 mb-2" style="width: 20rem;" th:each="produto : ${produtos}">
+            <div class="card-body">
+                <h5 class="card-title" th:text="${produto.nome}"></h5>
+                <h6 class="card-subtitle mb-2 text-muted" th:text="${produto.dataLancamento}"></h6>
+                <p class="card-text" th:text="${produto.descricao}"></p>
+                <p th:text="'R$' + ${produto.preco}"></p>
+                <div class="row">
+                    <a class="col btn btn-primary me-2"
+                       th:href="@{produtos/{produtoId}/edit(produtoId = ${produto.id})}">Editar</a>
+                    <a class="col btn btn-danger ms-2"
+                       th:href="@{produtos/{produtoId}/delete(produtoId = ${produto.id})}">Deletar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer th:replace="~{base :: footer}"></footer>
+</body>
+</html>

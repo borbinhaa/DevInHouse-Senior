@@ -1,0 +1,111 @@
+.login-hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(315deg, #7cffcb 0%, #74f2ce 74%);
+    padding: 30px;
+}
+
+.container {
+    max-width: 850px;
+    width: 100%;
+    background-color: #fff;
+    padding: 40px 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.container .form {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+}
+
+.container .form-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-content .login-form {
+    width: calc(100% - 25px);
+}
+
+form .form-content .title {
+    position: relative;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+}
+
+form .form-control .input-boxes {
+    margin-top: 30px;
+}
+
+form .form-content .input-box {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+}
+
+.form-content .input-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 2px solid rgba(0, 0, 0, .2);
+    transition: all .3s ease;
+}
+
+.form-content .input-box input:hover,
+.form-content .input-box input:valid {
+    border-color: #353535;
+}
+
+form .form-content .text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+form .form-content .text a {
+    text-decoration: none;
+}
+
+
+form .form-content .text a:hover {
+    text-decoration: underline;
+}
+
+form .form-content .button {
+    margin-top: 40px;
+}
+
+form .form-content .button input {
+    color: #fff;
+    background-color: #353535;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+    transition: all .4s linear;
+    margin-bottom: 25px;
+}
+
+form .form-content .button input:hover {
+    transform: scale(0.95);
+}
+
+form .form-content label {
+    color: #5b13b9;
+    cursor: pointer;
+}
+
+form .form-content label:hover {
+    text-decoration: underline;
+}

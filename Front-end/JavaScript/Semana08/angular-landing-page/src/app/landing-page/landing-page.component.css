@@ -1,0 +1,219 @@
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url(/assets/img/campo-milho.jpg);
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 45px 8% 0 8%;
+}
+
+.logo {
+    color: white;
+    font-size: 35px;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+span {
+    color: #353535;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 25px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #353535;
+    transition: .4s;
+}
+
+.btn {
+    background-color: #353535;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all 0.4s linear;
+    box-shadow: 0 0 5px #000, 0 0 15px #858585;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+}
+
+h1 {
+    color: #fff;
+    margin: 20px 0;
+    font-size: 75px;
+}
+
+.content p {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+
+h4 {
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+/* Sobre nós section */
+
+.about {
+    width: 100%;
+    padding: 100px 0;
+    height: 100vh;
+    background-color: white;
+}
+
+.about img {
+    height: auto;
+    width: 430px;
+    box-shadow: 7px 7px 1em #aaa;
+}
+
+.main {
+    width: 1130px;
+    max-width: 95%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-text {
+    width: 550px;
+}
+
+.about-text h5 {
+    color: grey;
+    letter-spacing: 2px;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    color: #858585;
+    letter-spacing: 1px;
+    line-height: 28px;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.about-text button {
+    background-color: #353535;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all .6s linear;
+    cursor: pointer;
+}
+
+.about-text button:hover {
+    transform: scale(1.1);
+}
+
+/* Serviços */
+
+.service {
+    width: 100%;
+    padding: 100px 0;
+}
+
+.title h2 {
+    color: #353535;
+    font-size: 75px;
+    width: 1130px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.card {
+    color: white;
+    height: 365px;
+    width: 365px;
+    padding: 20px 35px;
+    background: #353535;
+    border-radius: 20px;
+    margin: 15px;
+    position: relative;
+    text-align: center;
+}
+
+h5 {
+    font-size: 23px;
+    margin-bottom: 15px;
+}
+
+.pra p {
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 25px;
+}
+
+/* Contato */
+.contact-me {
+    width: 100%;
+    height: 290px;
+    background: #e5e8e8;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-me p {
+    color: #353535;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.contact-me .button-two {
+    background-color: #353535;
+    color: white;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 10px 25px;
+    border-radius: 30px;
+    transition: all .6s linear;
+}
+
+.contact-me .button-two:hover {
+    transform: scale(1.1);
+}

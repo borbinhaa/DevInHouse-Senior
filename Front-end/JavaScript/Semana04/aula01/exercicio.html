@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        body div,
+        body button {
+            width: 40%;
+            background-color: rgb(214, 214, 214);
+        }
+
+        .div2 {
+            margin-top: 20px;
+            height: 25%;
+        }
+
+        h1,
+        ol {
+            padding: 20px 10px;
+        }
+
+        ol {
+            margin-left: 20px;
+        }
+
+        button {
+            margin-top: 30px;
+            padding: 10px;
+        }
+
+        .border {
+            border: 1px solid blue;
+            border-radius: 5px;
+        }
+
+        .none {
+            display: none;
+        }
+    </style>
+
+    <script src="script_exercicio.js" defer></script>
+</head>
+
+<body>
+    <div class="border div1">
+        <h1>Filmes Preferido</h1>
+        <ol>
+            <li>Filme1</li>
+            <li>Filme2</li>
+            <li>Filme3</li>
+        </ol>
+    </div>
+    <button id="button1" class="border">Ver titulos preferidos</button>
+
+    <div class="border div2">
+
+    </div>
+    <button id="button2" class="border">Ver titulos preferidos</button>
+
+</body>
+
+</html>

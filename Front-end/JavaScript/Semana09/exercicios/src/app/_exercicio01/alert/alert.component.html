@@ -1,0 +1,18 @@
+<h1 class="h1 container m-3">Calculadora</h1>
+
+<div id="soma">
+  <app-soma [valor1]="value1" [valor2]="value2" [resultado]="resultado"></app-soma>
+</div>
+
+<div class="container m-3">
+
+  <div class="mb-3">
+    <input [(ngModel)]='value1' type="number" class="form-control" placeholder="Número 1">
+  </div>
+  <div class="mb-3">
+    <input [(ngModel)]='value2' type="number" class="form-control" placeholder="Número 2">
+  </div>
+  <button class="btn btn-outline-primary btn-lg me-2" (click)="limpa()">Limpar</button>
+  <button class="btn btn-primary btn-lg" (click)="calculaSoma()">Calcular</button>
+
+</div>
